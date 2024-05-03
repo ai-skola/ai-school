@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Jomolhari } from "next/font/google";
 import "./globals.css";
+import Menu from "@/components/menu/Menu";
 
-const inter = Inter({ subsets: ["latin"] });
+const jomolhari = Jomolhari({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="bg-g">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className="h-full bg-gradient-to-tl from-[#9CB6EA] to-[#D5DBE2] box-border">
+      <body className={`${jomolhari.className} flex flex-row flex-nowrap h-full`}>
+        <Menu />
+        {children}
+      </body>
     </html>
   );
 }

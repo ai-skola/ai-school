@@ -16,7 +16,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full bg-gradient-to-tl from-[#9CB6EA] to-[#D5DBE2] box-border">
+    <html lang="en" className="h-full bg-gradient-to-tl from-[#9CB6EA] to-[#D5DBE2]">
       <body className={`${jomolhari.className} flex flex-row flex-nowrap h-full`}>
         <Menu />
         {children}

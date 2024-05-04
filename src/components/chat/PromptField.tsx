@@ -18,7 +18,6 @@ export default function PromptField() {
           <Image src="icons/paperplane.svg" alt="send" width={22} height={22} />
         </div>
       </div>
-
     </div>
 
   )

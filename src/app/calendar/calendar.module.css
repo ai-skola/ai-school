@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.controlContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-right: 44px;
+  margin-left: 43px;
+  margin-top: 40px;
+  font-family: "Inter", sans-serif;
+}
+.formatSelect {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  height: 48px;
+  align-items: center;
+  -webkit-box-shadow: 0px 13px 18px -2px #b8b8b8;
+  box-shadow: 0px 13px 18px -2px #b8b8b8;
+}
+.infoContainer {
+  display: flex;
+}
+
+.dayContainer {
+  display: flex;
+  width: 89px;
+  height: 44px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.weekContaiener {
+  display: flex;
+  width: 89px;
+  height: 44px;
+  background-color: #4f44d0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+}
+
+.monthContainer {
+  display: flex;
+  width: 89px;
+  height: 44px;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.timeSelect {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0px 13px 18px -2px #b8b8b8;
+  box-shadow: 0px 13px 18px -2px #b8b8b8;
+}
+
+.monthSelectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 27px;
+}
+.yearSelectContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 27px;
+}
+
+.split {
+  width: 1px;
+  height: 27px;
+  border-left: #1c17c0 0.5px solid;
+}
+
+.infoContainer {
+  width: 448px;
+  height: 48px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  -webkit-box-shadow: 0px 13px 18px -2px #b8b8b8;
+  box-shadow: 0px 13px 18px -2px #b8b8b8;
+}
+
+.blueCircle {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #0505a1;
+  margin-right: 14px;
+}
+
+.greenCircle {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #5cce4f;
+  margin-right: 14px;
+}
+
+.yellowCircle {
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: #e1ea38;
+  margin-right: 14px;
+}
+
+.testContaiener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 89px;
+  height: 29px;
+}
+
+.hwContaiener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 147px;
+  height: 29px;
+}
+
+.lessionContaiener {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 29px;
+}
+
+.calendarContaienr {
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  height: 750px;
+  width: 1250px;
+  background-color: #e2eaf9;
+  border-radius: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border: #2a3333 1px solid;
+  font-family: "Inter", sans-serif;
+}
+
+.dayz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100% / 7);
+  border-right: #2a3333 1px solid;
+}
+
+.day_name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.subject {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}

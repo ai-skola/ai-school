@@ -1,0 +1,28 @@
+.grid_item {
+  width: 176px;
+  height: 135px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.blue {
+  background-color: rgba(5, 5, 163, 0.5);
+  color: black;
+  -webkit-box-shadow: inset 0px 0px 9px 3px rgba(5, 5, 163, 0.3);
+  box-shadow: inset 0px 0px 9px 3px rgba(5, 5, 163, 0.3);
+}
+
+.green {
+  background-color: rgba(92, 206, 79, 0.5);
+  color: black;
+  -webkit-box-shadow: inset 0px 0px 9px 3px rgba(92, 206, 79, 1);
+  box-shadow: inset 0px 0px 9px 3px rgba(92, 206, 79, 1);
+}
+
+.yellow {
+  background-color: rgba(255, 255, 0, 0.445);
+  color: black;
+  -webkit-box-shadow: inset 0px 0px 9px 3px rgb(255, 255, 0);
+  box-shadow: inset 0px 0px 9px 3px rgba(255, 255, 0);
+}

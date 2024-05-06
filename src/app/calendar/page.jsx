@@ -1,7 +1,8 @@
+"use client";
+
 import React from "react";
 import styles from "./calendar.module.css";
 import "./calendar.css";
-import { randomInt } from "crypto";
 
 function page() {
   const days = [
@@ -22,47 +23,27 @@ function page() {
     "Georgian",
     "Sport",
   ];
+
+  const grades = [8, 7, 9, 10, 9, 7, 10];
+  const reasons = [
+    "didn't know 2+2",
+    "heart is on the other side",
+    "made horse go backwards",
+    "beautiful art",
+    "he knew 1121",
+    "didn't know deep meaning in ვეფხისტყაოსანი",
+    "strong ashell",
+  ];
   const colors = ["blue", "green", "yellow"];
+
+  const handleSubjectClick = (subject, grade, reason) => {
+    console.log(`Subject: ${subject} Grade: ${grade}, Reason: ${reason}`);
+  };
 
   return (
     <div className={styles.main}>
       <div className={styles.container}>
-        <div className={styles.controlContainer}>
-          <div className={styles.formatSelect}>
-            <div className={styles.dayContainer} id="interText">
-              <h3 className={styles.day}>Day</h3>
-            </div>
-            <div className={styles.weekContaiener} id="interText">
-              <h3 className={styles.week}>Week</h3>
-            </div>
-            <div className={styles.monthContainer} id="interText">
-              <h3 className={styles.month}>Month</h3>
-            </div>
-          </div>
-          <div className={styles.timeSelect}>
-            <div className={styles.monthSelectContainer}>
-              <button className={styles.monthSelector}>Month</button>
-            </div>
-            <div className={styles.split}></div>
-            <div className={styles.yearSelectContainer}>
-              <button className={styles.yearSelector}>Year</button>
-            </div>
-          </div>
-          <div className={styles.infoContainer}>
-            <div className={styles.testContaiener}>
-              <div className={styles.blueCircle}></div>
-              <h3 className={styles.test}></h3>Test
-            </div>
-            <div className={styles.hwContaiener}>
-              <div className={styles.yellowCircle}></div>
-              <h3 className={styles.hw}>Homework</h3>
-            </div>
-            <div className={styles.lessionContaiener}>
-              <div className={styles.greenCircle}></div>
-              <h3 className={styles.lession}>Lession</h3>
-            </div>
-          </div>
-        </div>
+        <div className={styles.controlContainer}>{/*... */}</div>
         <div className={styles.calendarContaienr}>
           <div className={styles.calendar}>
             {days.map((day, i) => (
@@ -71,16 +52,26 @@ function page() {
                 {subjects
                   .slice(i)
                   .concat(subjects.slice(0, i))
-                  .map((subject, j) => (
-                    <div
-                      className={`grid_item ${
-                        colors[Math.floor(Math.random() * colors.length)]
-                      }`}
-                      key={j}
-                    >
-                      <div className={styles.subject}>{subject}</div>
-                    </div>
-                  ))}
+                  .map((subject, j) => {
+                    const index = subjects.indexOf(subject);
+                    return (
+                      <div
+                        className={`grid_item ${
+                          colors[Math.floor(Math.random() * colors.length)]
+                        }`}
+                        key={j}
+                        onClick={() =>
+                          handleSubjectClick(
+                            subject,
+                            grades[index],
+                            reasons[index]
+                          )
+                        }
+                      >
+                        <div className={styles.subject}>{subject}</div>
+                      </div>
+                    );
+                  })}
               </div>
             ))}
           </div>

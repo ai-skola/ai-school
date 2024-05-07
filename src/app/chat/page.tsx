@@ -18,11 +18,9 @@ export default function page() {
         <div className='flex self-end'><Dropdown /></div>
         <div className='w-full flex flex-col justify-between grow'>
           <div className={`${inter.className} flex flex-col justify-center py-8 items-center gap-2`}>
-            <Image src="icons/dev.svg" alt='logo' width={102} height={102} />
-            <h1 className='text-4xl'>AI SCHOOL</h1>
+            <Image src="icons/logo_svg.svg" alt='logo' width={300} height={300} className='h-auto' />
           </div>
           <div className={`${roboto.className}`}>
-            
             <div className='py-4'>
               <PromptField/>
             </div>

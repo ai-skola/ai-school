@@ -6,7 +6,7 @@ export default function PromptField() {
   return (
     <div className='flex justify-between gap-3'>
       <div className='grow'>
-        <div className='flex justify-between mb-4 2xl:justify-around'>
+        <div className='flex lg:gap-2 justify-between mb-4 2xl:justify-around'>
           <Card text='Help you Improve grades' />
           <Card text='Send Explained Materials.' />
           <Card text='Search Anything.' />

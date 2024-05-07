@@ -1,9 +1,10 @@
 "use client";
-import React, { useState } from 'react'
-import Image from 'next/image'
-import Button from './Button'
-import { Inter } from 'next/font/google'
-import Search from './menu/Search';
+import styles from './sidebar.module.css'
+import React, { useState } from 'react';
+import Image from 'next/image';
+import Button from '../Button';
+import { Inter } from 'next/font/google';
+import Search from '../menu/Search';
 
 const inter = Inter({ subsets: ["latin"] });
 

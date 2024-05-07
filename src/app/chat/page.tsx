@@ -1,4 +1,4 @@
-import Sidebar from '@/components/Sidebar'
+import Sidebar from '@/components/sidebar/Sidebar'
 import React from 'react'
 import Dropdown from '@/components/Dropdown'
 import Image from 'next/image'
@@ -12,6 +12,7 @@ const roboto = Roboto({ subsets: ["latin"], weight: "400" })
 
 export default function page() {
   return (
+  <div>
     <div className='h-full w-full flex'>
       <Sidebar />
       <div className='flex flex-col items-center w-full p-8'>
@@ -28,5 +29,6 @@ export default function page() {
         </div>
       </div>
     </div>
+  </div>
   )
 }

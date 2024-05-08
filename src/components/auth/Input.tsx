@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react'
 import { InputHTMLAttributes } from 'react'
 import styles from './Input.module.css'
+
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   icon: string,
   password?: boolean

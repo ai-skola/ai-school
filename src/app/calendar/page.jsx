@@ -57,9 +57,13 @@ function page() {
 
     // Set its content to the subject, grade, and reason values
     div.innerHTML = `
-      <p>Your Grade: ${grade} - <p class="whyText" style="background-color: #1e0786; color: white; border-radius:5px;width:55px;height:25px;">Why?</p></p>
+    <div style="display:flex">
+      <p>Your Grade: ${grade} - <p class="whyText" style="margin-left:5px;background-color: #1e0786; color: white; border-radius:5px;width:55px;height:25px;">Why?</p></p>
+      </div>
       <p>Attendance: ${attendance}</p>
-      <p>Material: ${material}</p>
+      <div style="display:flex">
+      <p>Material: <p style="text-decoration: underline;display:flex;">${material}</p></p>
+      </div>
     `;
 
     // Add the div to the document body

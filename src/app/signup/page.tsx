@@ -30,7 +30,7 @@ export default function Login() {
             <Input icon='icons/lock.svg' password={true} placeholder='Confirm Password...' />
           </div>
           <div className='flex hover:cursor-pointer justify-end gap-1 w-full self-end pb-8'>
-            <span className='text-sm'>Remember Me</span>
+            <span className='text-sm'>Remember me</span>
             <div onClick={handleToggle} className='bg-black flex justify-center items-center p-1 rounded-md aspect-square'>
               {checked && <Image src="icons/checkmark.svg" alt="checkmark" width={11} height={11} />}
             </div>

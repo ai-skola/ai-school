@@ -33,6 +33,7 @@ const MessageSchema = new mongoose.Schema(
   {timestamps: true}
 )
 
+
 const ChatSchema = new mongoose.Schema(
   {
     title: {
@@ -42,3 +43,9 @@ const ChatSchema = new mongoose.Schema(
     messages: [MessageSchema]
   }
 )
+
+const User = mongoose.model("User", userSchema);
+const Message = mongoose.model("Message", MessageSchema);
+const Chat = mongoose.model("Chat", ChatSchema);
+
+export { User, Message, Chat }

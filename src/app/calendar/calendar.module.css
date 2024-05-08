@@ -123,12 +123,15 @@
   margin-right: 14px;
 }
 
-.yellowCircle {
+.redCircle {
   width: 29px;
   height: 29px;
-  border-radius: 50%;
-  background-color: #e1ea38;
+  border-radius: 5px;
+  background-color: #bb280b;
   margin-right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .testContaiener {
@@ -195,4 +198,51 @@
   font-size: 20px;
   padding: 10px;
   border-radius: 10px;
+}
+
+.hwLogo {
+  width: 32px;
+  height: 32px;
+  background-color: #bb280b;
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.downArrow {
+  margin-left: 5px;
+}
+
+.infoBox {
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 9px 27px -6px #525252;
+  box-shadow: 0px 9px 27px -6px #525252;
+}
+
+.reasonTip {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 1000;
+  margin-top: -34px;
+  width: 300px;
+  text-align: center;
+  -webkit-box-shadow: 0px 9px 15px 5px #bdbdbd;
+  box-shadow: 0px 9px 15px 5px #bdbdbd;
 }

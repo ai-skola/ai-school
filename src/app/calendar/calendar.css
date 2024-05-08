@@ -4,25 +4,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  border-top: #2a3333 1px solid;
+}
+
+.whyText {
+  background-color: #1e0786;
 }
 
 .blue {
-  background-color: rgba(5, 5, 163, 0.5);
+  background-color: rgb(5, 5, 161, 0.4);
   color: black;
-  -webkit-box-shadow: inset 0px 0px 9px 3px rgba(5, 5, 163, 0.3);
-  box-shadow: inset 0px 0px 9px 3px rgba(5, 5, 163, 0.3);
 }
 
 .green {
-  background-color: rgba(92, 206, 79, 0.5);
+  background-color: rgb(92, 206, 79, 0.4);
   color: black;
-  -webkit-box-shadow: inset 0px 0px 9px 3px rgba(92, 206, 79, 1);
-  box-shadow: inset 0px 0px 9px 3px rgba(92, 206, 79, 1);
 }
 
 .yellow {
-  background-color: rgba(255, 255, 0, 0.445);
+  background-color: rgb(92, 206, 79, 0.4);
   color: black;
-  -webkit-box-shadow: inset 0px 0px 9px 3px rgb(255, 255, 0);
-  box-shadow: inset 0px 0px 9px 3px rgba(255, 255, 0);
+}
+
+.blue div {
+  opacity: 0;
+}
+
+.green div {
+  opacity: 0;
+}
+
+.yellow div {
+  opacity: 100;
 }

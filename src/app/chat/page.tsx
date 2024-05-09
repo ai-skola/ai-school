@@ -25,7 +25,7 @@ export default function Chat() {
     setPrompt(value);
   };
 
-  const handleSend = async (e) => {
+  const handleSend = async (e: MouseEvent) => {
     e.preventDefault();
     const response = await runChat(prompt);
     setChat(prev => [...prev, prompt, response])

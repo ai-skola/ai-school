@@ -16,8 +16,7 @@ export default function Menu() {
       <div className='flex flex-col gap-4'>
         <MenuItem href="/dashboard" src='icons/dashboard.svg'text='Dashboard' />
         <MenuItem href="/chat" src='icons/chat2.svg'text='AI Chat' />
-        <MenuItem href="" src='icons/book.svg'text='Grades' /> 
-        <MenuItem href="" src='icons/folder.svg'text='Homework' />
+        <MenuItem href="/calendar" src='icons/calendar.svg' text='Calendar' /> 
       </div>
       <HoverButton src='icons/settings.svg' alt='settings'/>
     </div>

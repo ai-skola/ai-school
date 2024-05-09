@@ -4,7 +4,8 @@ import { NextApiRequest, NextApiResponse } from "next";
 import mongoose from "mongoose";
 
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt)");
+const bcrypt = require("bcrypt");
+const JWT_SECRET = "SH2MZ8M+[k8J*0#tXrTe{2GquV:bj"
 
 export default async function handler(
   req: NextApiRequest,
@@ -28,10 +29,11 @@ export default async function handler(
         return res.status(401).json({message: "Invalid email or password."})
       }
 
-      const token = jwt.sign({userId: user._id}, process.env.JWT_SECRET, {
+      const token = jwt.sign({userId: user._id}, JWT_SECRET, {
         expiresIn: "24h"
       });
 
+      res.setHeader('Authorization', `Bearer ${token}`);
       res.status(200).json({ token })
     } catch (error) {
       console.error("Loggin error: ", error);

@@ -28,6 +28,13 @@ const userSchema = new mongoose.Schema(
       min: 3,
       max: 40
     },
+    phone: {
+      type: String,
+      required: true,
+      unique: true,
+      min: 13,
+      max: 13
+    },
     email: {
       type: String,
       required: true,
@@ -45,8 +52,8 @@ const userSchema = new mongoose.Schema(
   {timestamps: true}
 );
 
-const User = mongoose.model("User", userSchema);
-const Message = mongoose.model("Message", MessageSchema);
-const Chat = mongoose.model("Chat", ChatSchema);
+const Message = mongoose.models.Message || mongoose.model("Message", MessageSchema);
+const Chat = mongoose.models.Chat || mongoose.model("Chat", ChatSchema);
+const User = mongoose.models.User || mongoose.model("User", userSchema);
 
-export { User, Message, Chat }
+export { User, Message, Chat };

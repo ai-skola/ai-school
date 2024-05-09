@@ -6,30 +6,34 @@ import Dropdown from '@/components/Dropdown'
 import Image from 'next/image'
 import { Inter, Roboto } from 'next/font/google'
 import PromptField from '@/components/chat/PromptField'
-import axios from 'axios';
+import Message from '@/components/chat/Message';
+import runChat from '../../../utils/runChat';
 
 
 const inter = Inter({ subsets: ["latin"] });
 const roboto = Roboto({ subsets: ["latin"], weight: "400" })
 
-export default function Chat() {
-  const [formData, setFormData] = useState({
-    title: ""
-  });
 
+
+export default function Chat() {
+  const [prompt, setPrompt] = useState('');
+  const [chat, setChat] = useState([]);
+
+  const chatEmpty = chat.length === 0;
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+    const { value } = e.target;
+    setPrompt(value);
   };
 
   const handleSend = async (e) => {
     e.preventDefault();
-    const response = await axios.post('/api/chats');
-    console.log(response.data);
+    const response = await runChat(prompt);
+    setChat(prev => [...prev, prompt, response])
+    setPrompt('');
   }
+
+  console.log(chat);
+
   return (
     <div className='w-full'>
       <div className='h-full w-full flex'>
@@ -37,12 +41,16 @@ export default function Chat() {
         <div className='flex flex-col items-center w-full p-8'>
           <div className='flex self-end'><Dropdown /></div>
           <div className='w-full flex flex-col justify-between grow'>
-            <div className={`${inter.className} flex flex-col justify-center py-8 items-center gap-2`}>
+            {chatEmpty ? (<div className={`${inter.className} flex flex-col justify-center py-8 items-center gap-2`}>
               <Image src="icons/logo_svg.svg" alt='logo' width={300} height={300} className='h-auto' />
-            </div>
+            </div>) : (<div className='flex flex-col px-2 gap-2 justify-end h-full'>
+              {chat.map((message, i) => (
+                <Message key={i} text={message}/>
+              ))}
+            </div>)}
             <div className={`${roboto.className}`}>
               <div className='py-4'>
-                <PromptField value={formData.title} name='title' onChange={handleChange} onClick={handleSend} />
+                <PromptField value={prompt} name='title' onChange={handleChange} onSend={handleSend} chat={chat} />
               </div>
             </div>
           </div>

@@ -30,7 +30,6 @@ export default function Sidebar() {
           <Button icon='icons/stack.svg' text='Materials' className={`${inter.className} bg-gradient-to-r from-[#372B94] hover:cursor-pointer to-[#3E4AF3] flex rounded-md text-base py-3 px-3 items-center shadow-lg text-white`} />
         </div>
         <Search/>
-        <h4>ამეებს მონაცემთა ბაზას რო გავმართავთ მერე დავამატებ</h4>
       </div>
     </div>
 

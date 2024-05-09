@@ -1,3 +1,4 @@
+
 const {
   GoogleGenerativeAI,
   HarmCategory,
@@ -5,9 +6,9 @@ const {
 } = require("@google/generative-ai");
 
 const MODEL_NAME = "gemini-1.5-pro-latest";
-const API_KEY = process.env.API_KEY;
+const API_KEY = "AIzaSyBLEQnxBf0i6bUQi2ySEhIoApnlForgJjo";
 
-export default async function runChat() {
+export default async function runChat(prompt: string) {
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: MODEL_NAME });
 
@@ -44,7 +45,7 @@ export default async function runChat() {
     ],
   });
 
-  const result = await chat.sendMessage("YOUR_USER_INPUT");
+  const result = await chat.sendMessage(prompt);
   const response = result.response;
   return response.text();
 }

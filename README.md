@@ -1,36 +1,44 @@
-AI SCHOOL
+# AI-Skola — Prototype
 
-## Getting Started
+AI-Skola is a simple prototype for an education platform that combines learning content, performance statistics, and AI-powered assistance in one place. It's an early startup prototype that demonstrates how education, analytics, and AI can work together to improve learning.
 
-First, run the development server:
+## Overview
+This website is a lightweight prototype of an education platform. It brings together courses and lessons, assessment tracking, and analytics, with AI features that help learners get personalized guidance and insights into their progress.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What it has
+- Course pages with lessons and learning content
+- Quizzes and assessments to measure progress
+- Learner progress tracking (per-user progress and completion)
+- Analytics dashboards and statistics (performance over time, completion rates)
+- AI-powered features (personalized recommendations, feedback, and study suggestions)
+- Simple admin/content management for creating or editing material
+- Prototype-focused code and examples (not a production-ready system)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## What it does
+- Lets learners study course material and take quizzes
+- Collects performance data and shows visual statistics
+- Uses AI to suggest next steps, personalized content, and feedback
+- Gives instructors or admins quick insight into learner progress and course health
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How it works (high level)
+1. Users sign up / log in and enroll in courses.
+2. Learners go through lessons and complete quizzes or exercises.
+3. The platform records results and usage data.
+4. Analytics process the data and show dashboards and reports.
+5. AI components analyze learner performance and generate recommendations or feedback to personalize learning paths.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Trying the prototype
+- Install [Node.js](https://nodejs.org/en/download/current)
+- Clone the repo
+  ```bash
+  git clone https://github.com/ai-skola/ai-school.git
+  cd ai-school
+  ```
+- Install dependencies (uses npm)
+  ```bash
+  npm install
+  ```
+- Start the development server
+  ```bash
+  npm run dev
+  ```
